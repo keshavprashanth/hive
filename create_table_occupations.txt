@@ -1,0 +1,20 @@
+CREATE EXTERNAL TABLE occupations (
+id int,
+occupation string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION '/user/cloudera/hive/occupations';
+
+
+
+INSERT INTO occupations values 
+(1, "Student"),
+(2, "Teacher"),
+(3, "Engineer"),
+(4, "Driver"),
+(5, "Doctor"),
+(6, "Police"),
+(7, "Politician"),
+(8, "Pharmacist"),
+(9, "Manager");
