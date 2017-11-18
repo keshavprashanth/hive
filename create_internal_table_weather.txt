@@ -1,0 +1,16 @@
+CREATE TABLE weather (
+city String,
+temp INT,
+precip INT)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/cloudera/hive/occupations';
+
+
+
+INSERT INTO weather VALUES
+("New York", 30, 25),
+("Phoenix", 38, 0),
+("Boston", 22, 40),
+("Detroit", 18, 80),
+("San Fransicso", 26, 22);
