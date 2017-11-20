@@ -4,7 +4,7 @@ temp INT,
 precip INT)
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-LOCATION '/user/cloudera/hive/occupations';
+LOCATION '/user/cloudera/hive/weather';
 
 
 
