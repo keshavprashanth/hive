@@ -1,0 +1,27 @@
+CREATE TABLE mytable1 (
+name string,
+city string,
+employee_id int )
+CLUSTERED BY (employee_id) INTO 4 BUCKETS
+
+
+INSERT INTO mytable1 values
+("Keshav", "Detroit", 1),
+("Ryan", "New York", 2),
+("Mary", "Austin", 3),
+("Tim", "Ann Arbor", 4),
+("Karl", "Charlotte", 5),
+("Elena", "Atlanta", 6);
+
+
+
+
+CREATE TABLE orders_bucketed (
+order_id int,
+order_date string,
+order_customer_id int,
+order_status string
+)
+CLUSTERED BY (order_status) INTO 4 BUCKETS
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE;
