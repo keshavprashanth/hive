@@ -1,0 +1,35 @@
+CREATE TABLE employee (
+empid INT,
+empname STRING)
+PARTITIONED BY (country STRING)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+
+
+
+SET hive.exec.dynamic.partition = true;
+SET hive.exec.dynamic.partition.mode = nonstrict;
+
+
+LOAD DATA LOCAL INPATH '/home/cloudera/edgenode/hive/australia.txt' INTO TABLE employee PARTITION(country="Australia")
+
+INSERT INTO employee partition(country = "USA") VALUES
+(10, "Peter"),
+(11, "Steve");
+
+
+INSERT INTO employee partition(country) VALUES
+(1, "Raj", "India"),
+(2, "Ken", "UK"),
+(3, "Tom", "USA"),
+(4, "Kiran", "India"),
+(5, "Stephany", "USA"),
+(6, "Riya", "India"),
+(7, "Earl" , "UK"),
+(8, "Mary", "USA"),
+(9, "Ben", "USA");
+
+
+
+
