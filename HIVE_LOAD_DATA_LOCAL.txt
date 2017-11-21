@@ -1,0 +1,2 @@
+LOAD DATA LOCAL INPATH '/home/cloudera/edgenode/hive/weather.txt' OVERWRITE INTO TABLE test_db.weather;
+
