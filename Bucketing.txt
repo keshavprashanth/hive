@@ -5,6 +5,9 @@ employee_id int )
 CLUSTERED BY (employee_id) INTO 4 BUCKETS
 
 
+set hive.enforce.bucketing=true;
+
+
 INSERT INTO mytable1 values
 ("Keshav", "Detroit", 1),
 ("Ryan", "New York", 2),
@@ -22,6 +25,6 @@ order_date string,
 order_customer_id int,
 order_status string
 )
-CLUSTERED BY (order_status) INTO 4 BUCKETS
+CLUSTERED BY (order_id) INTO 4 BUCKETS
 ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
 STORED AS TEXTFILE;
