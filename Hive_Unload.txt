@@ -1,0 +1,5 @@
+INSERT OVERWRITE DIRECTORY '/user/cloudera/hive_unload/' SELECT * FROM test_db.employee;
+
+
+
+hive -e "SELECT * FROM test_db.employee" > employee.txt
