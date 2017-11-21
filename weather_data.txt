@@ -1,0 +1,8 @@
+New York,30,25
+Phoenix,38,0
+Boston,22,40
+Detroit,18,80
+San Fransicso,26,22
+Denver,22,35
+Dallas,32,60
+Seattle,24,90
